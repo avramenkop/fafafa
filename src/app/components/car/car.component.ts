@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from "@ngrx/store";
+import {deleteCar} from "../../store/actions/car.actions";
 
 @Component({
   selector: 'app-car',
@@ -18,4 +19,11 @@ export class CarComponent implements OnInit {
     })
   }
 
+  deleteCar(id) {
+    this.store.dispatch(deleteCar({
+      carId: {
+        id
+      }
+    }))
+  }
 }

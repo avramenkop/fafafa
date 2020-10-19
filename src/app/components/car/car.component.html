@@ -5,7 +5,8 @@
     class="car"
     *ngFor="let car of key.value"
   >
-    <p><span>{{car.name}} {{car.model}}</span></p>
+    <span>{{car.name}} {{car.model}}</span>
+    <button (click)="deleteCar(car.id)">delete</button>
   </div>
 </ng-container>
 

@@ -30,7 +30,8 @@ export class AddCarComponent implements OnInit {
     this.store.dispatch(addCar({
       carData: {
         name: this.form.get('name').value,
-        model: this.form.get('model').value
+        model: this.form.get('model').value,
+        id: new Date().getTime().toString()
       }
     }))
     this.form.reset()

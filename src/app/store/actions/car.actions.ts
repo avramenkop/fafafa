@@ -6,3 +6,7 @@ export const addCar = createAction(
   props<{ carData: Car }>()
 );
 
+export const deleteCar = createAction(
+  '[CarComponent] DELETE_CAR',
+  props<{ carId: object }>()
+);
