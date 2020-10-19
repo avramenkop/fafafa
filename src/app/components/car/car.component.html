@@ -1,0 +1,11 @@
+<ng-container
+  *ngFor="let key of cars | keyvalue"
+>
+  <div
+    class="car"
+    *ngFor="let car of key.value"
+  >
+    <p><span>{{car.name}} {{car.model}}</span></p>
+  </div>
+</ng-container>
+
